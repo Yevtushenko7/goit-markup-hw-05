@@ -22,7 +22,8 @@
       <div class="header">
         <nav class="nav">
           <a class="logo" href="./index.html">
-            <span class="logoweb">Web</span> Studio
+            <span class="logoweb">Web</span>
+            <span class="header-studio">Studio</span>
           </a>
 
           <ul class="menu">
@@ -39,18 +40,20 @@
         </nav>
         <ul class="menu-contact">
           <li class="item mail">
-            <svg class="icon-mail" width="16" height="12">
-              <use href="./img/symbol-defs.svg#icon-mail"></use>
-            </svg>
-            <a class="link" href="mailto:info@devstudio.com">
+            <a class="link" href="mailto:info@devstudio.com"
+              ><svg class="icon-mail" width="16" height="12">
+                <use href="./img/symbol-defs.svg#icon-mail"></use>
+              </svg>
               info@devstudio.com</a
             >
           </li>
           <li class="item tel">
-            <svg class="icon-phone" width="10" height="16">
-              <use href="./img/symbol-defs.svg#icon-smartphone"></use>
-            </svg>
-            <a class="link" href="tel:+380961111111"> +38 096 111 11 11</a>
+            <a class="link" href="tel:+380961111111">
+              <svg class="icon-phone" width="10" height="16">
+                <use href="./img/symbol-defs.svg#icon-smartphone"></use>
+              </svg>
+              +38 096 111 11 11</a
+            >
           </li>
         </ul>
       </div>
@@ -64,7 +67,14 @@
           Эффективные решения <br />
           для вашего бизнеса
         </h1>
-        <button class="button" type="button">Заказать услугу</button>
+        <button data-modal-open class="button" type="button">
+          Заказать услугу
+        </button>
+        <div class="backdrop is-hidden" data-modal>
+          <div class="modal">
+            <button class="btn-close" data-modal-close><b></b></button>
+          </div>
+        </div>
       </section>
 
       <!--Features-->
@@ -613,5 +623,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
